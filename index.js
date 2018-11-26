@@ -9,7 +9,13 @@ app.set("views", path.join(__dirname + "/views/"));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	res.render("home.ejs", { title: "Einstein CI theory" });
+	const user = {
+		title: "Einstein CI theory",
+		name: "chandra",
+		image: "einstein_compound_intrest.png",
+		friends: ["chandra01", "chandra02", "chandra03", "chandra04"]
+	};
+	res.render("home.ejs", { user: user });
 });
 
 app.listen(PORT, err => {

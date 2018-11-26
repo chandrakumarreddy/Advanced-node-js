@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><%=title%></title>
+	<title><%=user.title%></title>
+	<style>
+		div{
+		      font-size:14px;
+		      text-align: center;
+		}
+		ul{
+		list-style:telugu;
+		padding:0;
+		}
+	</style>
 </head>
 <body>
-	<h1>Chandra kumar reddy</h1>
-	<img src="/images/einstein_compound_intrest.png" alt="Compound interest image">
+	<div>
+	<h1><%= user.name%></h1>
+	<img src="/images/<%=user.image%>" alt="Compound interest image">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, distinctio quibusdam sapiente reprehenderit vitae fugit eius omnis eligendi quisquam dolore labore incidunt sed magni hic natus fugiat. Quam, debitis ab!</p>
+	<p>FRIENDS</p>
+	<ul>
+	<% user.friends.forEach(friend=> {%>
+	<li><%= friend%></li>
+	<% })%>
+	</ul>
+	</div>
 </body>
 </html>
