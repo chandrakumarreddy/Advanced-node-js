@@ -1,25 +1,17 @@
-const express = require("express");
-const mongodb = require("mongodb");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const user = require("./Models/user.model.js");
-const PORT = process.env.PORT || 3001;
-const userRouter = require("./Controllers/userRouter");
-mongoose.connect("mongodb://localhost/advnode");
+const express = require("express"),
+	ejs = require("ejs"),
+	path = require("path"),
+	PORT = process.env.PORT || 3000,
+	app = express();
 
-//creating instances
-const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", ejs);
+app.set("views", path.join(__dirname + "/views/"));
+app.use(express.static("public"));
 
-//middlewares
-app.use("/users", userRouter);
-//root route
 app.get("/", (req, res) => {
-	res.send("hello");
+	res.render("home.ejs", { title: "Einstein CI theory" });
 });
 
-//establishing successful connection
 app.listen(PORT, err => {
 	if (!err) {
 		console.log("server is up and running");

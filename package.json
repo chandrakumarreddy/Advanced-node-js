@@ -6,14 +6,20 @@
   "scripts": {
     "start": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandrakumarreddy/Advanced-node-js.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandrakumarreddy/Advanced-node-js/issues"
+  },
+  "homepage": "https://github.com/chandrakumarreddy/Advanced-node-js#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mongodb": "^3.1.10",
-    "mongoose": "^5.3.13",
     "nodemon": "^1.18.6"
   }
 }
