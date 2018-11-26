@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/chandrakumarreddy/Advanced-node-js/issues"
   },
-  "homepage": "https://github.com/chandrakumarreddy/Advanced-node-js#readme",
-  "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "nodemon": "^1.18.6"
-  }
+  "homepage": "https://github.com/chandrakumarreddy/Advanced-node-js#readme"
 }
