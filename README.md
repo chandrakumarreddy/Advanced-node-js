@@ -6,7 +6,7 @@ MVC Pattern:- MVC is a architectural pattern for seperation of functionality wit
 
 Why MVC Pattern:- Better maintainabiltiy of code within application.
 
-Mongoose :- MOngose is a schema based data model for mongodb collections.
+Mongoose :- Mongose is a schema based data model for mongodb collections.
 
     const Schema=new Schema({ user:String...})
 
